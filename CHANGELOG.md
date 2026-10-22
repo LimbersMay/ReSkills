@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 · 2026-10-22
+
+- `re-git`: la norma prohíbe la atribución también en los cuerpos de las PRs y en las notas de las
+  releases, no solo en los commits, aunque el entorno pida añadirla. `ship` y `commit` lo repiten en «Lo
+  que nunca haces».
+
 ## 0.2.0 · 2026-10-22
 
 - Nuevo plugin `re-git` con la norma de git de la suite (ramas, commits, PRs, versiones) y dos skills:

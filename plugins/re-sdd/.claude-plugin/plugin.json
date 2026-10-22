@@ -1,7 +1,7 @@
 {
   "name": "re-sdd",
   "description": "Skills de spec-driven development para proyectos creados con ReTemplate: del material de partida a requisitos EARS, slices, verificación y guías.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": {
     "name": "Limbers May"
   },
