@@ -23,7 +23,7 @@ Prioridad: Must · Origen: inbox §2 Fase 1 · Slice: —
 ```
 
 - El encabezado `### ID · título` lo leen `npm run trace` y las skills: no cambies su forma.
-- `Slice` queda en `—` hasta que `sdd-plan` lo asigna.
+- `Slice` queda en `—` hasta que `/sdd:design` lo asigna al hacer el roadmap.
 - Los IDs no se reutilizan nunca, ni los de requisitos retirados.
 
 ## Requisitos retirados

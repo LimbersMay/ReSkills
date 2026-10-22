@@ -1,32 +1,32 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "re-skills",
+  "name": "limbersmay",
   "metadata": {
-    "description": "Skills de la suite Re: spec-driven development y la norma de git."
+    "description": "Skills de Limbers May: spec-driven development y una norma de git. No dependen de ningún producto: cada proyecto declara sus piezas en su AGENTS.md."
   },
   "owner": {
     "name": "Limbers May"
   },
   "plugins": [
     {
-      "name": "re-sdd",
-      "description": "Skills de spec-driven development para proyectos creados con ReTemplate: del material de partida a requisitos EARS, slices, verificación y guías.",
-      "version": "0.2.2",
+      "name": "sdd",
+      "description": "Spec-driven development: del material de partida a requisitos EARS, diseño, slices, tareas y verificación, sobre una estructura de docs/ que el proyecto adopta.",
+      "version": "0.3.0",
       "author": {
         "name": "Limbers May"
       },
-      "source": "./plugins/re-sdd",
+      "source": "./plugins/sdd",
       "category": "development",
       "tags": ["sdd", "spec-driven-development", "requirements", "ears", "workflow"]
     },
     {
-      "name": "re-git",
-      "description": "La norma de git de la suite Re, aplicada: ramas por slice o por cambio, commits con [Sxx-Tn] y requisitos, PRs con merge commit, versiones y releases.",
-      "version": "0.2.2",
+      "name": "git",
+      "description": "Una norma de git aplicada: ramas por slice o por cambio, commits con [Sxx-Tn] y requisitos, PRs con merge commit, versiones y releases.",
+      "version": "0.3.0",
       "author": {
         "name": "Limbers May"
       },
-      "source": "./plugins/re-git",
+      "source": "./plugins/git",
       "category": "development",
       "tags": ["git", "commits", "pull-requests", "releases", "workflow"]
     }

@@ -1,6 +1,6 @@
 # Formato de `docs/discovery.md`
 
-Es el cuaderno del descubrimiento: el estado entre sesiones. Lo escribe y lo mantiene `sdd-discover`;
+Es el cuaderno del descubrimiento: el estado entre sesiones. Lo escribe y lo mantiene `/sdd:discover`;
 el usuario lo puede leer para ver qué falta. Al cerrar el descubrimiento se queda como historia.
 
 ````markdown

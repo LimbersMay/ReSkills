@@ -1,6 +1,6 @@
 ---
 name: commit
-description: "Commitea los cambios de un repo de la suite Re siguiendo su norma de git: crea la rama si se está en main, reparte los cambios en commits (uno por tarea, con [Sxx-Tn] y el pie Requisitos/Decisiones), escribe título y cuerpo, y sube la rama. Úsala cuando el usuario diga «commitea», «haz commit», «guarda esto en git», cuando dé el OK a una tarea de un slice o cuando acabe un cambio que hay que guardar. No fusiona ni publica: eso es /re-git:ship."
+description: "Commitea los cambios de un repo siguiendo su norma de git: crea la rama si se está en main, reparte los cambios en commits (uno por tarea, con [Sxx-Tn] y el pie Requisitos/Decisiones), escribe título y cuerpo, y sube la rama. Úsala cuando el usuario diga «commitea», «haz commit», «guarda esto en git», cuando dé el OK a una tarea de un slice o cuando acabe un cambio que hay que guardar. No fusiona ni publica: eso es /git:ship."
 ---
 
 # commit
@@ -22,7 +22,7 @@ Ejecuta `git status --porcelain`, `git branch --show-current`, `git diff HEAD --
 ## 2. La rama
 
 - **En `main`:** crea la rama antes de nada (`git switch -c <rama>`), con el nombre de la norma:
-  - En un producto con un slice en curso, `slice/Sxx-nombre`. El slice lo da `npm run status` o la
+  - En un producto con un slice en curso, `slice/Sxx-nombre`. El slice lo da el estado del proyecto (`npm run status` en ReTemplate) o la
     primera fila sin ✅ de `docs/roadmap.md`.
   - En los demás casos, `feat/`, `fix/`, `docs/` o `chore/` con un tema corto sacado de los cambios.
   - Los cambios sin commitear viajan con `git switch -c`: no hace falta stash.
@@ -74,7 +74,7 @@ En pocas líneas:
 - La rama.
 - Cada commit con su hash corto y su título.
 - Lo que quedó sin commitear y por qué.
-- El siguiente paso: seguir con la siguiente tarea o, si la rama está terminada, `/re-git:ship`.
+- El siguiente paso: seguir con la siguiente tarea o, si la rama está terminada, `/git:ship`.
 
 ## Lo que nunca haces
 

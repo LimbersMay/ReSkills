@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.3.0 · 2026-10-22
+
+- **Rompe:** el repo pasa a ser `LimbersMay/skills`, el marketplace `limbersmay` y los plugins `sdd` y
+  `git`. Las skills se invocan sin prefijos repetidos: `/sdd:discover`, `/git:commit`, `/git:ship`. Para
+  migrar: `/plugin marketplace remove re-skills` y los pasos de «Instalar» del README.
+- Las skills ya no dependen de la suite Re. `sdd/references/proyecto.md` dice qué estructura de `docs/`
+  espera `sdd` y qué piezas declara el proyecto en su `AGENTS.md` (sistema de diseño, estado, verde,
+  trazabilidad, git, textos), con lo que hace la skill si falta alguna. `discover` y la norma de git
+  hablan de esas piezas, y ReTemplate y ReDesign quedan como ejemplo.
+- Plan: nuevo plugin `ux` con `/ux:explore`, la exploración de interfaz por tandas que `/sdd:design`
+  llamará para `ux.md`.
+
 ## 0.2.2 · 2026-10-22
 
 - Plan de skills: `sdd-plan` entra en `sdd-design`, `sdd-guide` en `sdd-work` (con un modo para cuando el
