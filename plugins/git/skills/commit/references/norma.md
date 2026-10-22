@@ -1,7 +1,11 @@
-# Norma de git de la suite Re
+# Norma de git
 
-Vale para todos los repos de la suite. Es la única copia: el `AGENTS.md` de cada repo la resume y
-enlaza aquí. Si un `AGENTS.md` dice otra cosa, manda el `AGENTS.md`.
+Vale para los repos que la adoptan: su `AGENTS.md` la resume y enlaza aquí. Es la única copia. Si un
+`AGENTS.md` dice otra cosa, manda el `AGENTS.md`.
+
+Los ejemplos vienen de los repos de Limbers May (ReTame, ReDesign, ReTemplate). La norma no depende de
+ellos: donde dice `npm run check` o `npm run trace`, vale lo que el `AGENTS.md` del repo declare para lo
+mismo.
 
 La idea: **en `main` solo entran estados cerrados.** Todo se hace en una rama corta, entra por una PR y se
 fusiona con un *merge commit*. `git log --first-parent --oneline main` da una línea por slice o por
@@ -11,8 +15,8 @@ versión; debajo de cada una quedan los commits de su rama, uno por tarea.
 
 | Tipo | Cómo se reconoce | Unidad de rama | Versión |
 |---|---|---|---|
-| **Producto** | Tiene `docs/roadmap.md` y no tiene `TEMPLATE.md` (ReTame, ReSession) | Un slice, la fase 0 o un arreglo | Al cerrar un hito del roadmap, o cuando el usuario lo pide |
-| **Librería** | Todo lo demás (ReDesign, ReSkills, ReTemplate) | Un cambio que se publica | Siempre: fusionar es publicar |
+| **Producto** | Tiene `docs/roadmap.md` y no tiene `TEMPLATE.md` (ReTame) | Un slice, la fase 0 o un arreglo | Al cerrar un hito del roadmap, o cuando el usuario lo pide |
+| **Librería** | Todo lo demás: librerías, plantillas, repos de skills (ReDesign, ReTemplate) | Un cambio que se publica | Siempre: fusionar es publicar |
 
 ## Ramas
 
@@ -28,7 +32,8 @@ versión; debajo de cada una quedan los commits de su rama, uno por tarea.
 | `chore/<tema>` | Dependencias, herramientas, CI |
 | `spike/<tema>` | Una prueba que se tira: no se fusiona nunca; la respuesta se escribe en `architecture.md` |
 
-- **Nunca se commitea en `main`.** En un producto lo impide el hook `pre-commit`.
+- **Nunca se commitea en `main`.** Si el repo tiene un hook `pre-commit` que lo impide (ReTemplate lo
+  trae), mejor.
 
 ## Commits
 
@@ -46,7 +51,7 @@ Decisiones: P-12
 
 | Tipo | Cuándo |
 |---|---|
-| `feat` | Comportamiento nuevo que se ve (en el producto, en una skill, en una clase de ReDesign) |
+| `feat` | Comportamiento nuevo que se ve (en el producto, en una skill, en una clase de un sistema de diseño) |
 | `fix` | Algo que no hacía lo que debía |
 | `refactor` | Mismo comportamiento, otro código |
 | `test` | Solo tests (los de una tarea van en el commit de la tarea) |
@@ -58,7 +63,7 @@ Decisiones: P-12
 
 - **Ámbito**, opcional: en un producto, el área del requisito en minúsculas (`pau`, `bau`) si el commit
   implementa requisitos; si no, la pieza (`engine`, `popup`, `status`, `i18n`). En una librería, la
-  skill, el componente o el script (`sdd-discover`, `tree`, `trace`).
+  skill, el componente o el script (`discover`, `tree`, `trace`).
 - **Resumen** en español, en presente, diciendo qué hace ahora el código: «trace ignora los requisitos
   retirados», «restaura un hilo completo». Empieza en minúscula y no lleva punto.
 - **`[Sxx-Tn]`** cuando el commit cierra una tarea de `tasks.md`. Fuera de un slice no se pone.
@@ -148,7 +153,8 @@ El cuerpo termina en «Fuera»: sin líneas de atribución después.
     anteriores.
   - En un producto, cada línea cita sus requisitos.
 - **Dónde vive el número:** el `version` de `package.json` y de cada `.claude-plugin/*.json`.
-  - ReTemplate no tiene número en `package.json`: su `0.0.0` es el de partida de los productos.
+  - Una plantilla puede no llevar número en `package.json`, porque el suyo es el de partida de los
+    productos (el `0.0.0` de ReTemplate). Entonces no se toca.
   - Todos los que haya suben juntos.
 - **Cómo se publica:**
   1. Un commit `chore(release): X.Y.Z` al final de la rama: número y CHANGELOG.

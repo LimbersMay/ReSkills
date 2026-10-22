@@ -1,6 +1,6 @@
 ---
 name: discover
-description: "Fase 0 de spec-driven development en un proyecto de ReTemplate: convierte el material de partida de docs/inbox/ (documento de requisitos, mocks, notas) en docs/product.md y docs/requirements.md en EARS, detectando huecos con un análisis MECE y preguntando al usuario en rondas socráticas de tres preguntas como máximo. Úsala cuando el usuario quiera arrancar un producto, descubrir o aclarar requisitos, pasar un documento o un mock a specs, seguir con el descubrimiento («siguiente ronda») o cuando `npm run status` diga /sdd:discover. No escribe código ni decide por el usuario."
+description: "Fase 0 de spec-driven development: convierte el material de partida de docs/inbox/ (documento de requisitos, mocks, notas) en docs/product.md y docs/requirements.md en EARS, detectando huecos con un análisis MECE y preguntando al usuario en rondas socráticas de tres preguntas como máximo. Úsala cuando el usuario quiera arrancar un producto, descubrir o aclarar requisitos, pasar un documento o un mock a specs, seguir con el descubrimiento («siguiente ronda») o cuando el estado del proyecto diga /sdd:discover. No escribe código ni decide por el usuario."
 ---
 
 # discover
@@ -15,14 +15,17 @@ mucho. La sesión siguiente empieza donde dejó la anterior, leyendo `docs/disco
 
 ## Antes de empezar
 
-1. Comprueba que es un proyecto de ReTemplate: existen `AGENTS.md`, `docs/product.md`,
-   `docs/requirements.md` y `docs/inbox/`. Si falta alguno, dilo y para; no crees la estructura por tu
-   cuenta.
-2. Lee `AGENTS.md` (las reglas del proyecto mandan sobre esta skill si chocan) y, si existe,
-   `docs/discovery.md`. Si existe, **es una ronda siguiente**: ve a [Ronda siguiente](#ronda-siguiente).
+1. Comprueba que el proyecto tiene la estructura de [../../references/proyecto.md](../../references/proyecto.md):
+   existen `AGENTS.md`, `docs/product.md`, `docs/requirements.md` y `docs/inbox/`. Si falta alguno,
+   dilo y para; no crees la estructura por tu cuenta.
+2. Lee `AGENTS.md` (las reglas del proyecto mandan sobre esta skill si chocan) y apunta sus piezas,
+   sobre todo el **sistema de diseño** (tabla de `proyecto.md`). Si existe `docs/discovery.md`, léelo:
+   **es una ronda siguiente**, ve a [Ronda siguiente](#ronda-siguiente).
 3. Lee **todo** el material de `docs/inbox/` salvo su `README.md`. Un HTML se lee como contenido: los
-   textos visibles, los comentarios y los datos de ejemplo. Lo que dice de colores, tipografía o tamaño
-   no es un requisito (el aspecto lo da ReDesign); anótalo solo si contradice algo.
+   textos visibles, los comentarios y los datos de ejemplo. Lo que dice de colores, tipografía o tamaño:
+   - **Con sistema de diseño**, no es un requisito (el aspecto lo da el sistema); anótalo solo si
+     contradice algo.
+   - **Sin sistema de diseño**, va a «Para sdd-design» como referencia visual, no como requisito.
 4. Lee la conversación actual: si el usuario ya decidió algo en ella («la vista X no va», «solo un
    grupo»), es una decisión de producto con fecha de hoy. Se registra como P-nn igual que una respuesta.
 
@@ -56,9 +59,10 @@ Compara el material entre sí (documento contra mock, una sección contra otra) 
 que ya dio el usuario. Cada contradicción es un hueco de la categoría que le toque, con las dos versiones
 citadas. No elijas una versión: pregunta.
 
-Las diferencias que ya resuelve el sistema no se preguntan; se anotan con su motivo: el nombre o el
-tamaño de ventana que traiga un mock frente a los de `node_modules/re-design/docs/products/<slug>.md`,
-o un estilo visual frente a ReDesign.
+Las diferencias que ya resuelve el sistema de diseño no se preguntan; se anotan con su motivo: el
+nombre o el tamaño de ventana que traiga un mock frente a los que fija el sistema para el producto, o un
+estilo visual frente al del sistema. En ReDesign, por ejemplo, los fija
+`node_modules/re-design/docs/products/<slug>.md`.
 
 ### 3. Huecos (MECE)
 
@@ -117,7 +121,8 @@ Reglas de las preguntas:
 - Cada opción con un **ejemplo concreto** (valores, una pestaña, un caso) que muestre la diferencia. Sin
   ejemplo, la opción no se entiende.
 - Siempre una recomendación con su motivo, y siempre la posibilidad de una respuesta distinta.
-- No preguntes lo que el material ya responde ni lo que es de diseño visual (lo resuelve ReDesign).
+- No preguntes lo que el material ya responde ni lo que es de diseño visual (lo resuelve el sistema de
+  diseño o, si no hay, la fase de diseño).
 - Si hay Propuestas nuevas, lístalas después de las preguntas en una tabla corta
   (`H-nn · propuesta · requisito que desbloquea`) y pide un «OK a las propuestas» o los vetos.
 - **Doce Propuestas por ronda como mucho**, las que desbloquean más requisitos primero. Un «OK» en bloque

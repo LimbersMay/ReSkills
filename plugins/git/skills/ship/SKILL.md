@@ -1,6 +1,6 @@
 ---
 name: ship
-description: "Cierra la rama actual de un repo de la suite Re siguiendo su norma de git: comprueba que está lista (check en verde y, en un slice, tareas y verificación cerradas), pone el CHANGELOG y la versión, abre la PR con su título y cuerpo, la fusiona con merge commit tras el OK del usuario y, si toca versión, crea el tag y la release de GitHub. Úsala cuando el usuario diga «cierra la rama», «abre la PR», «fusiona», «publica», «saca la versión» o cuando un slice termine su verificación."
+description: "Cierra la rama actual de un repo siguiendo su norma de git: comprueba que está lista (check en verde y, en un slice, tareas y verificación cerradas), pone el CHANGELOG y la versión, abre la PR con su título y cuerpo, la fusiona con merge commit tras el OK del usuario y, si toca versión, crea el tag y la release de GitHub. Úsala cuando el usuario diga «cierra la rama», «abre la PR», «fusiona», «publica», «saca la versión» o cuando un slice termine su verificación."
 ---
 
 # ship
@@ -43,7 +43,7 @@ Si algo de esto falla, para y di qué falta. No lo arregles por tu cuenta dentro
   - `feat` sube MINOR.
   - El resto sube PATCH.
 - **El commit `chore(release): X.Y.Z`:**
-  - Sube el número en todos los sitios donde vive (`package.json` salvo en ReTemplate, cada
+  - Sube el número en todos los sitios donde vive (`package.json` salvo en una plantilla sin número, cada
     `.claude-plugin/*.json`).
   - En el CHANGELOG, la sección `## Sin publicar` pasa a llevar la versión y la fecha, con el formato de
     título que ya usa el archivo.
