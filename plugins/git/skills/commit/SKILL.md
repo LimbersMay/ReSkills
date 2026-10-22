@@ -1,6 +1,6 @@
 ---
 name: commit
-description: "Commitea los cambios de un repo de la suite Re siguiendo su norma de git: crea la rama si se está en main, reparte los cambios en commits (uno por tarea, con [Sxx-Tn] y el pie Requisitos/Decisiones), escribe título y cuerpo, y sube la rama. Úsala cuando el usuario diga «commitea», «haz commit», «guarda esto en git», cuando dé el OK a una tarea de un slice o cuando acabe un cambio que hay que guardar. No fusiona ni publica: eso es /re-git:ship."
+description: "Commitea los cambios de un repo de la suite Re siguiendo su norma de git: crea la rama si se está en main, reparte los cambios en commits (uno por tarea, con [Sxx-Tn] y el pie Requisitos/Decisiones), escribe título y cuerpo, y sube la rama. Úsala cuando el usuario diga «commitea», «haz commit», «guarda esto en git», cuando dé el OK a una tarea de un slice o cuando acabe un cambio que hay que guardar. No fusiona ni publica: eso es /git:ship."
 ---
 
 # commit
@@ -74,7 +74,7 @@ En pocas líneas:
 - La rama.
 - Cada commit con su hash corto y su título.
 - Lo que quedó sin commitear y por qué.
-- El siguiente paso: seguir con la siguiente tarea o, si la rama está terminada, `/re-git:ship`.
+- El siguiente paso: seguir con la siguiente tarea o, si la rama está terminada, `/git:ship`.
 
 ## Lo que nunca haces
 

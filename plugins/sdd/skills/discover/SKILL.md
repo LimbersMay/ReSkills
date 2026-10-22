@@ -1,9 +1,9 @@
 ---
-name: sdd-discover
-description: "Fase 0 de spec-driven development en un proyecto de ReTemplate: convierte el material de partida de docs/inbox/ (documento de requisitos, mocks, notas) en docs/product.md y docs/requirements.md en EARS, detectando huecos con un análisis MECE y preguntando al usuario en rondas socráticas de tres preguntas como máximo. Úsala cuando el usuario quiera arrancar un producto, descubrir o aclarar requisitos, pasar un documento o un mock a specs, seguir con el descubrimiento («siguiente ronda») o cuando `npm run status` diga /re-sdd:sdd-discover. No escribe código ni decide por el usuario."
+name: discover
+description: "Fase 0 de spec-driven development en un proyecto de ReTemplate: convierte el material de partida de docs/inbox/ (documento de requisitos, mocks, notas) en docs/product.md y docs/requirements.md en EARS, detectando huecos con un análisis MECE y preguntando al usuario en rondas socráticas de tres preguntas como máximo. Úsala cuando el usuario quiera arrancar un producto, descubrir o aclarar requisitos, pasar un documento o un mock a specs, seguir con el descubrimiento («siguiente ronda») o cuando `npm run status` diga /sdd:discover. No escribe código ni decide por el usuario."
 ---
 
-# sdd-discover
+# discover
 
 Del material en bruto a un producto y unos requisitos que el usuario aprueba. Tu papel es el de un
 analista que **pregunta**, no el de alguien que rellena huecos: todo lo que el material no dice lo decide
@@ -45,7 +45,7 @@ Reparte cada sección o bloque del material en su destino. Es la tabla «Mapa» 
 | Fuera | Lo que el usuario ya descartó o que el material marca como extra |
 
 Lo que va a `domain.md`, `architecture.md` y `ux.md` **no se redacta aquí**: se anota en la sección «Para
-sdd-design» de `discovery.md` con su referencia al material, y lo redacta `sdd-design`.
+sdd-design» de `discovery.md` con su referencia al material, y lo redacta `/sdd:design`.
 
 Separa siempre el **qué** del **cómo**. «Las pestañas pausadas liberan memoria» es un requisito;
 «se llama a `chrome.tabs.discard`» es arquitectura. Un mismo párrafo suele tener las dos cosas.
@@ -165,14 +165,14 @@ Must del alcance tiene sus requisitos. Entonces:
 3. **Aprobación.** Con todo respondido, `discovery.md` dice «Estado: cierre» y pides al usuario que
    apruebe `product.md` y `requirements.md`. Con su OK explícito, quita el marcador
    `<!-- sdd:pendiente -->` de los dos y escribe «Cerrado» con la fecha al principio de `discovery.md`.
-4. Siguiente paso: `/re-sdd:sdd-design` (dominio, arquitectura, interfaz y spikes).
+4. Siguiente paso: `/sdd:design` (dominio, arquitectura, interfaz y spikes).
 
 ## Lo que nunca haces
 
 - Decidir por el usuario: ni elegir entre dos versiones del material, ni rellenar un valor que falta,
   ni dar por aceptada una Propuesta.
 - Escribir código, crear slices o tocar `docs/domain.md`, `docs/architecture.md`, `docs/ux.md` o
-  `docs/roadmap.md` (son de `sdd-design` y `sdd-plan`).
+  `docs/roadmap.md` (son de `/sdd:design`).
 - Editar `docs/inbox/`.
 - Más de tres preguntas o más de doce Propuestas por ronda.
 - Borrar un requisito o reutilizar su ID: se retira.

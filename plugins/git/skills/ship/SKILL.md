@@ -13,7 +13,7 @@ Lleva una rama terminada hasta `main`, y hasta una versión publicada si toca. L
 
 - **La rama:** `git branch --show-current`. En `main` no hay nada que cerrar: dilo y para. Una rama
   `spike/…` no se fusiona nunca.
-- **Cambios sin commitear:** haz primero lo de `/re-git:commit` ([SKILL](../commit/SKILL.md)).
+- **Cambios sin commitear:** haz primero lo de `/git:commit` ([SKILL](../commit/SKILL.md)).
 - **Al día con `main`:** ejecuta `git fetch` y `git merge origin/main` (es un merge, no un rebase: la
   rama ya está subida). Con conflictos, para y avisa.
 - **El tipo de repo** (producto o librería), con la tabla de la norma.
