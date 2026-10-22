@@ -11,7 +11,7 @@
     {
       "name": "re-sdd",
       "description": "Skills de spec-driven development para proyectos creados con ReTemplate: del material de partida a requisitos EARS, slices, verificación y guías.",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "author": {
         "name": "Limbers May"
       },
@@ -22,7 +22,7 @@
     {
       "name": "re-git",
       "description": "La norma de git de la suite Re, aplicada: ramas por slice o por cambio, commits con [Sxx-Tn] y requisitos, PRs con merge commit, versiones y releases.",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "author": {
         "name": "Limbers May"
       },
