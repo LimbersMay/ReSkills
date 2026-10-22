@@ -1,6 +1,6 @@
 ---
 name: sdd-discover
-description: "Fase 0 de spec-driven development en un proyecto de re-template: convierte el material de partida de docs/inbox/ (documento de requisitos, mocks, notas) en docs/product.md y docs/requirements.md en EARS, detectando huecos con un análisis MECE y preguntando al usuario en rondas socráticas de tres preguntas como máximo. Úsala cuando el usuario quiera arrancar un producto, descubrir o aclarar requisitos, pasar un documento o un mock a specs, seguir con el descubrimiento («siguiente ronda») o cuando `npm run status` diga /re-sdd:sdd-discover. No escribe código ni decide por el usuario."
+description: "Fase 0 de spec-driven development en un proyecto de ReTemplate: convierte el material de partida de docs/inbox/ (documento de requisitos, mocks, notas) en docs/product.md y docs/requirements.md en EARS, detectando huecos con un análisis MECE y preguntando al usuario en rondas socráticas de tres preguntas como máximo. Úsala cuando el usuario quiera arrancar un producto, descubrir o aclarar requisitos, pasar un documento o un mock a specs, seguir con el descubrimiento («siguiente ronda») o cuando `npm run status` diga /re-sdd:sdd-discover. No escribe código ni decide por el usuario."
 ---
 
 # sdd-discover
@@ -15,7 +15,7 @@ mucho. La sesión siguiente empieza donde dejó la anterior, leyendo `docs/disco
 
 ## Antes de empezar
 
-1. Comprueba que es un proyecto de re-template: existen `AGENTS.md`, `docs/product.md`,
+1. Comprueba que es un proyecto de ReTemplate: existen `AGENTS.md`, `docs/product.md`,
    `docs/requirements.md` y `docs/inbox/`. Si falta alguno, dilo y para; no crees la estructura por tu
    cuenta.
 2. Lee `AGENTS.md` (las reglas del proyecto mandan sobre esta skill si chocan) y, si existe,

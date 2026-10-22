@@ -29,7 +29,7 @@ Material: requisitos.md (2026-10-21) · mock.html (2026-10-21)
 
 | ID | Hueco | Origen | Clase | Estado |
 |---|---|---|---|---|
-| H-01 | ¿«Conectar con ReTabs» del pie del mock entra en la v1? | mock › pie | Bloquea | Ronda 1 |
+| H-01 | El mock tiene una vista de estadísticas que el documento no menciona: ¿entra en la v1? | mock › Estadísticas | Bloquea | Ronda 1 |
 
 ### Tiempo
 

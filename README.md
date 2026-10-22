@@ -1,7 +1,7 @@
-# re-sdd
+# ReSkills
 
 Skills de Claude Code para hacer spec-driven development en los productos de la suite Re. Funcionan
-sobre la estructura de [re-template](https://github.com/LimbersMay/re-template): `docs/inbox/`,
+sobre la estructura de [ReTemplate](https://github.com/LimbersMay/ReTemplate): `docs/inbox/`,
 `docs/product.md`, `docs/requirements.md`, `docs/specs/`…
 
 ## Instalar
@@ -9,17 +9,17 @@ sobre la estructura de [re-template](https://github.com/LimbersMay/re-template):
 Una vez por máquina, en Claude Code:
 
 ```text
-/plugin marketplace add LimbersMay/re-sdd
-/plugin install re-sdd@re-sdd
+/plugin marketplace add LimbersMay/ReSkills
+/plugin install re-sdd@re-skills
 ```
 
 Para probar cambios sin publicarlos, desde una copia local:
 
 ```text
-/plugin marketplace add C:\Users\limbe\Documents\PersonalProjects\re-sdd
+/plugin marketplace add C:\Users\limbe\Documents\PersonalProjects\ReSkills
 ```
 
-Después de cambiar una skill: `/plugin marketplace update re-sdd`.
+Después de cambiar una skill: `/plugin marketplace update re-skills`.
 
 ## Skills
 
