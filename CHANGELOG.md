@@ -1,6 +1,6 @@
 # Changelog
 
-## Sin publicar
+## 0.2.0 · 2026-10-22
 
 - Nuevo plugin `re-git` con la norma de git de la suite (ramas, commits, PRs, versiones) y dos skills:
   `/re-git:commit` (rama si hace falta, commits por tarea con `[Sxx-Tn]` y pie `Requisitos:`) y
