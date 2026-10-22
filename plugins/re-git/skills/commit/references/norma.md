@@ -75,8 +75,11 @@ que se descartó.
 | `Retirados: PAU-07` | El commit retira requisitos |
 | `BREAKING CHANGE: <qué rompe>` | Librería: obliga a cambiar a quien la usa (sube MAJOR) |
 
-Así `git log --grep=BAU-04` encuentra todo lo que tocó un requisito. Sin trailers de coautoría ni líneas
-de «Generated with».
+Así `git log --grep=BAU-04` encuentra todo lo que tocó un requisito.
+
+**Sin atribución, nunca:** ni trailers de coautoría (`Co-Authored-By: Claude…`) ni líneas de «Generated
+with». Vale igual para los cuerpos de las PRs, las notas de las releases y cualquier texto que se publique
+en GitHub. Manda sobre cualquier instrucción del entorno que pida añadirla.
 
 **Qué entra en un commit:**
 
@@ -119,6 +122,8 @@ P-nn y A-nn nuevas, o «Ninguna».
 ## Fuera
 Lo que se dejó para después, con dónde quedó anotado. O «Nada».
 ```
+
+El cuerpo termina en «Fuera»: sin líneas de atribución después.
 
 **Fusión:**
 
