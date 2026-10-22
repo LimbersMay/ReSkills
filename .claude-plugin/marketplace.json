@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "re-skills",
   "metadata": {
-    "description": "Spec-driven development para los productos de la suite Re."
+    "description": "Skills de la suite Re: spec-driven development y la norma de git."
   },
   "owner": {
     "name": "Limbers May"
@@ -15,9 +15,20 @@
       "author": {
         "name": "Limbers May"
       },
-      "source": "./plugin",
+      "source": "./plugins/re-sdd",
       "category": "development",
       "tags": ["sdd", "spec-driven-development", "requirements", "ears", "workflow"]
+    },
+    {
+      "name": "re-git",
+      "description": "La norma de git de la suite Re, aplicada: ramas por slice o por cambio, commits con [Sxx-Tn] y requisitos, PRs con merge commit, versiones y releases.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Limbers May"
+      },
+      "source": "./plugins/re-git",
+      "category": "development",
+      "tags": ["git", "commits", "pull-requests", "releases", "workflow"]
     }
   ]
 }
