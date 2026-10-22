@@ -1,6 +1,6 @@
 # Changelog
 
-## Sin publicar
+## 0.3.0 · 2026-10-22
 
 - **Rompe:** el repo pasa a ser `LimbersMay/skills`, el marketplace `limbersmay` y los plugins `sdd` y
   `git`. Las skills se invocan sin prefijos repetidos: `/sdd:discover`, `/git:commit`, `/git:ship`. Para

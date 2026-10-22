@@ -11,7 +11,7 @@
     {
       "name": "sdd",
       "description": "Spec-driven development: del material de partida a requisitos EARS, diseño, slices, tareas y verificación, sobre una estructura de docs/ que el proyecto adopta.",
-      "version": "0.2.2",
+      "version": "0.3.0",
       "author": {
         "name": "Limbers May"
       },
@@ -22,7 +22,7 @@
     {
       "name": "git",
       "description": "Una norma de git aplicada: ramas por slice o por cambio, commits con [Sxx-Tn] y requisitos, PRs con merge commit, versiones y releases.",
-      "version": "0.2.2",
+      "version": "0.3.0",
       "author": {
         "name": "Limbers May"
       },

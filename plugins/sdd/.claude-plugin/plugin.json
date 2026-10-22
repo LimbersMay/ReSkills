@@ -1,7 +1,7 @@
 {
   "name": "sdd",
   "description": "Spec-driven development: del material de partida a requisitos EARS, diseño, slices, tareas y verificación, sobre una estructura de docs/ que el proyecto adopta.",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "author": {
     "name": "Limbers May"
   },
