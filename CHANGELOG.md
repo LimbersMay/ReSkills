@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.2 · 2026-10-22
+
+- Plan de skills: `sdd-plan` entra en `sdd-design`, `sdd-guide` en `sdd-work` (con un modo para cuando el
+  usuario se atora) y `sdd-close` en `sdd-verify`, que también llama a `re-git`. `/re-sdd:next` es la
+  entrada única. Solo cambia el plan del README: ninguna skill construida cambia.
+
 ## 0.2.1 · 2026-10-22
 
 - `re-git`: la norma prohíbe la atribución también en los cuerpos de las PRs y en las notas de las
