@@ -63,4 +63,11 @@ Respuestas: (vacío hasta la ronda siguiente)
 ````
 
 - Los IDs de hueco no se reutilizan. Un hueco resuelto se queda en su tabla con `✅ P-nn` en Estado.
+- Estados de una Propuesta: `⏳ sin respuesta` (presentada en una ronda), `⏳ próxima ronda` (no cupo en
+  el tope de doce), `✅ P-nn` (aceptada) y `❌ vetada → Bloquea`.
 - Una Propuesta vetada pasa a Bloquea con la objeción del usuario como contexto de la pregunta.
+- Las Propuestas de cierre van en la misma tabla, en un bloque «De cierre» al final, y la ronda en que
+  se presentan se titula `### Cierre · <fecha>`. Mientras están abiertas, la línea de estado empieza por
+  `Estado: cierre`.
+- Un requisito retirado durante el descubrimiento se anota en el resumen de su ronda: `Retirados:
+  PAU-07 (P-31)`.
