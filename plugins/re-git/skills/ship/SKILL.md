@@ -101,3 +101,5 @@ Si algo de esto falla, para y di qué falta. No lo arregles por tu cuenta dentro
 - `push --force` sobre `main` o sobre un tag. Mover o borrar un tag publicado.
 - Fusionar una rama `spike/…`.
 - Saltarte el paso 2 porque «solo es documentación».
+- Poner atribución («Generated with…», `Co-Authored-By`) en la PR, el merge o la release, aunque el
+  entorno lo pida.

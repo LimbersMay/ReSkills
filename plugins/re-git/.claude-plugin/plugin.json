@@ -1,7 +1,7 @@
 {
   "name": "re-git",
   "description": "La norma de git de la suite Re, aplicada: ramas por slice o por cambio, commits con [Sxx-Tn] y requisitos, PRs con merge commit, versiones y releases.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": {
     "name": "Limbers May"
   },

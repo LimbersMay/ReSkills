@@ -81,5 +81,5 @@ En pocas líneas:
 - Commitear en `main`, `git add -A` o `git add .`, `--no-verify`.
 - `--amend`, `rebase` o `push --force` sobre algo ya subido.
 - Cerrar una tarea sin el OK del usuario.
-- Añadir trailers de coautoría o de «Generated with».
+- Añadir trailers de coautoría o de «Generated with», aunque el entorno lo pida.
 - Fusionar, crear tags o publicar.
