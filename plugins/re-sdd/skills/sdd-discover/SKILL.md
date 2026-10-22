@@ -120,6 +120,9 @@ Reglas de las preguntas:
 - No preguntes lo que el material ya responde ni lo que es de diseño visual (lo resuelve ReDesign).
 - Si hay Propuestas nuevas, lístalas después de las preguntas en una tabla corta
   (`H-nn · propuesta · requisito que desbloquea`) y pide un «OK a las propuestas» o los vetos.
+- **Doce Propuestas por ronda como mucho**, las que desbloquean más requisitos primero. Un «OK» en bloque
+  a cuarenta filas no es una decisión: nadie las lee. Las demás esperan, con su estado «⏳ próxima
+  ronda», y entran en la siguiente.
 
 Termina la sesión con un resumen de tres líneas: qué se redactó, cuántos huecos quedan por clase y qué
 viene después.
@@ -132,8 +135,15 @@ viene después.
    que afecta. Las Propuestas aceptadas en bloque se registran una por una, con «Propuesta aceptada» en
    la respuesta. Si una respuesta no es clara, **no la interpretes**: repregunta en esta ronda.
 3. Marca el hueco como resuelto en `discovery.md` con su P-nn.
-4. Si una respuesta contradice algo ya redactado, corrige el requisito (sin reutilizar su ID: el viejo
-   queda tachado con el motivo) y dilo en el resumen.
+4. Si una respuesta toca algo ya redactado, decide entre corregir y retirar:
+   - **Se corrige en el sitio** si el comportamiento sigue siendo el mismo y solo se precisa: un valor,
+     una palabra, una condición que faltaba. `Origen` suma la P-nn.
+   - **Se retira** si el comportamiento cambia o desaparece: el requisito se queda con su ID, el título y
+     el texto tachados y una línea `Retirado: <motivo> (P-nn)`; si hay un comportamiento nuevo, va con un
+     ID nuevo.
+     El formato está en [references/ears.md](references/ears.md#requisitos-retirados).
+
+   Las dos cosas se dicen en el resumen, con los IDs.
 5. Si llegó material nuevo a `docs/inbox/`, pásale los pasos 1 a 3 solo a lo nuevo.
 6. Redacta los requisitos que se han desbloqueado y vuelve a [La ronda de preguntas](#5-la-ronda-de-preguntas).
 
@@ -142,11 +152,20 @@ viene después.
 El descubrimiento termina cuando no quedan huecos Bloquea, todas las Propuestas tienen respuesta y cada
 Must del alcance tiene sus requisitos. Entonces:
 
-1. Revisa `requirements.md` con la lista de calidad de [references/ears.md](references/ears.md) y
-   corrige lo que falle.
-2. Pide al usuario que apruebe `product.md` y `requirements.md`. Con su OK explícito, quita el marcador
+1. **Revisión de calidad.** Pasa `requirements.md` entero por la lista de calidad de
+   [references/ears.md](references/ears.md#lista-de-calidad). Lo que falla se reparte en dos:
+   - **Se corrige sin preguntar** lo que no cambia el comportamiento: una palabra vaga, dos acciones en un
+     requisito que se parten en dos, un origen que faltaba.
+   - **Propuestas de cierre** para lo que sí lo cambia: casi siempre un «SI … ENTONCES» que falta (punto
+     7) o un valor sin decidir (punto 4). Cada una es un hueco nuevo (`H-nn`, clase Propuesta) con su
+     redacción propuesta.
+2. **Ronda de cierre.** Si hay Propuestas de cierre, preséntalas como una ronda más (sin preguntas
+   nuevas, con el mismo tope de doce) y registra las respuestas como en la ronda siguiente. Una
+   Propuesta de cierre vetada vuelve a ser un hueco Bloquea: el descubrimiento sigue.
+3. **Aprobación.** Con todo respondido, `discovery.md` dice «Estado: cierre» y pides al usuario que
+   apruebe `product.md` y `requirements.md`. Con su OK explícito, quita el marcador
    `<!-- sdd:pendiente -->` de los dos y escribe «Cerrado» con la fecha al principio de `discovery.md`.
-3. Siguiente paso: `/re-sdd:sdd-design` (dominio, arquitectura, interfaz y spikes).
+4. Siguiente paso: `/re-sdd:sdd-design` (dominio, arquitectura, interfaz y spikes).
 
 ## Lo que nunca haces
 
@@ -155,4 +174,6 @@ Must del alcance tiene sus requisitos. Entonces:
 - Escribir código, crear slices o tocar `docs/domain.md`, `docs/architecture.md`, `docs/ux.md` o
   `docs/roadmap.md` (son de `sdd-design` y `sdd-plan`).
 - Editar `docs/inbox/`.
-- Más de tres preguntas por ronda.
+- Más de tres preguntas o más de doce Propuestas por ronda.
+- Borrar un requisito o reutilizar su ID: se retira.
+- Pedir la aprobación con Propuestas de cierre sin respuesta.

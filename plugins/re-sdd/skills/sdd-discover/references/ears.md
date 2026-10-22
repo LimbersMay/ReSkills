@@ -24,8 +24,26 @@ Prioridad: Must · Origen: inbox §2 Fase 1 · Slice: —
 
 - El encabezado `### ID · título` lo leen `npm run trace` y las skills: no cambies su forma.
 - `Slice` queda en `—` hasta que `sdd-plan` lo asigna.
-- Los IDs no se reutilizan. Un requisito retirado se queda con el título tachado y una línea
-  `Retirado: <motivo> (P-nn)`.
+- Los IDs no se reutilizan nunca, ni los de requisitos retirados.
+
+## Requisitos retirados
+
+Un requisito no se borra: se retira. Así un test, una tarea o una decisión que lo citaba sigue
+encontrando qué decía y por qué dejó de valer.
+
+```text
+### PAU-07 · ~~Vista En Pausa~~
+~~ReTame DEBE mostrar en la vista En Pausa las pestañas del grupo de pausa de la ventana actual, con su título y su URL.~~
+Retirado: la vista muestra todas las ventanas (P-36); lo sustituye PAU-19.
+```
+
+- El ID queda **fuera** del tachado: es lo que leen `trace` y las skills. Se tachan el título y el texto.
+- La línea `Prioridad · Origen · Slice` se sustituye por `Retirado: <motivo> (P-nn)`, y si otro
+  requisito ocupa su lugar, «lo sustituye <ID>».
+- `npm run trace` los reconoce por la línea `Retirado:`: no cuentan como activos y un test que cite uno
+  sale como error, igual que un ID que no existe.
+- Cuándo se retira y cuándo se corrige en el sitio lo dice la skill (Ronda siguiente, paso 4). Después de
+  aprobado `requirements.md`, cualquier cambio de comportamiento es una retirada.
 
 ## Lista de calidad
 
