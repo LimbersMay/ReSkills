@@ -1,0 +1,9 @@
+{
+  "name": "re-sdd",
+  "description": "Skills de spec-driven development para proyectos creados con re-template: del material de partida a requisitos EARS, slices, verificación y guías.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Limbers May"
+  },
+  "skills": "./skills/"
+}

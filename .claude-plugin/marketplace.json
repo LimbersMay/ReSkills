@@ -1,0 +1,23 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "re-sdd",
+  "metadata": {
+    "description": "Spec-driven development para los productos de la suite Re."
+  },
+  "owner": {
+    "name": "Limbers May"
+  },
+  "plugins": [
+    {
+      "name": "re-sdd",
+      "description": "Skills de spec-driven development para proyectos creados con re-template: del material de partida a requisitos EARS, slices, verificación y guías.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Limbers May"
+      },
+      "source": "./plugin",
+      "category": "development",
+      "tags": ["sdd", "spec-driven-development", "requirements", "ears", "workflow"]
+    }
+  ]
+}
