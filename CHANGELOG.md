@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.1 · 2026-10-22
+
+- Plugin `ux` (planeado): sus referencias de investigación, en `plugins/ux/references/`. Son nueve
+  archivos con los principios de UI/UX que usará `/ux:explore`: método, tareas, estructura, jerarquía,
+  estados y textos, evaluación y accesibilidad. Cada principio lleva su fuente, cómo se mide con
+  Playwright y su confianza. Los mitos van en cada archivo, y las decisiones abiertas, en el índice.
+- El README describe de nuevo `/ux:explore`. El método saldrá de esta investigación y de una pasada a
+  mano con un producto real, no de la exploración por tandas que anunciaba la 0.3.0.
+
 ## 0.3.0 · 2026-10-22
 
 - **Rompe:** el repo pasa a ser `LimbersMay/skills`, el marketplace `limbersmay` y los plugins `sdd` y

@@ -9,7 +9,7 @@ skill pone el método y cada proyecto declara sus piezas (sistema de diseño, es
   pero cualquier proyecto puede adoptarla.
 - **`git`:** una [norma de git](plugins/git/skills/commit/references/norma.md) aplicada. Vale para
   productos y librerías.
-- **`ux`** (planeado): exploración de interfaz por tandas, con fundamentos de UI/UX.
+- **`ux`** (planeado): diseño de interfaz con fundamentos de UI/UX.
 
 ## Instalar
 
@@ -48,7 +48,7 @@ skill también se dispara hablando normal: «siguiente ronda», «estoy atorado 
 | `/sdd:verify` | Slice | Verifica una tarea contra su spec, escribe `review.md` y, con tu OK, la commitea. Con la última tarea, cierra el slice (docs al día, roadmap) y abre su PR | Planeada |
 | `/git:commit` | Siempre | Rama si hace falta, un commit por tarea con `[Sxx-Tn]` y su pie, y sube la rama. En un producto lo llama `/sdd:verify` | ✅ 0.3.0 |
 | `/git:ship` | Al cerrar una rama | Comprueba, CHANGELOG y versión, PR, merge commit con tu OK, tag y release. En un producto lo llama `/sdd:verify` al cerrar el slice | ✅ 0.3.0 |
-| `/ux:explore` | Interfaz | Diagnóstico y criterios, tesis divergentes (el mock de partida es la tesis 0), síntesis y estados reales, con capturas y A favor / En contra; cada tanda se añade y nunca sustituye a la anterior. Termina en `ux.md` y en lo que se sale del sistema de diseño | Planeada |
+| `/ux:explore` (nombre provisional) | Interfaz | De los requisitos a un diseño elegido con fundamento, probando variantes de estructura. Termina en `ux.md` y en lo que se sale del sistema de diseño. El método saldrá de la investigación de UI/UX y de una pasada a mano con un producto real | Planeada |
 
 `init` y `status` no son skills: en ReTemplate son `npm run init` y `npm run status`. `sdd-plan`,
 `sdd-guide` y `sdd-close` se fundieron en `design`, `work` y `verify` (2026-10-22).
