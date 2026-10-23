@@ -1,6 +1,6 @@
 # Changelog
 
-## Sin publicar
+## 0.3.1 · 2026-10-22
 
 - Plugin `ux` (planeado): sus referencias de investigación, en `plugins/ux/references/`. Son nueve
   archivos con los principios de UI/UX que usará `/ux:explore`: método, tareas, estructura, jerarquía,
