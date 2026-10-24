@@ -1,5 +1,20 @@
 # Changelog
 
+## Sin publicar
+
+- `discover` separa la necesidad de la vista. Las vistas de un mock o un quick design ya no se escriben
+  como requisitos: van a «Para sdd-design › ux.md» como hipótesis de interfaz, y la estructura se decide
+  al prototipar. Hay regla nueva en el paso 1 y un punto nuevo, «Sin vistas», en la lista de calidad de
+  `ears.md`. Los puntos siguientes de esa lista se renumeran.
+- Los ejemplos de `discover`, de `sdd/references/proyecto.md` y de la norma de git son de un producto
+  inventado, Regadera, en vez de productos reales. Los huecos de `gaps.md` dejan de suponer una
+  extensión de navegador.
+- El repo se aísla. `.claude/settings.json` bloquea las lecturas fuera del repo, y un hook bloquea los
+  comandos de terminal que salen de él. El `CLAUDE.md` del repo explica la regla.
+- Plugin `ux`: se retiran del plugin las referencias de la 0.3.1, que siguen en el tag `v0.3.1`. La
+  skill se rehace desde cero con el brief y la investigación de `material/`. El plan del README pasa a
+  dos skills, `/ux:mock` y `/ux:polish`.
+
 ## 0.3.1 · 2026-10-22
 
 - Plugin `ux` (planeado): sus referencias de investigación, en `plugins/ux/references/`. Son nueve
