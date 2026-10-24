@@ -22,11 +22,11 @@ Ejecuta `git status --porcelain`, `git branch --show-current`, `git diff HEAD --
 ## 2. La rama
 
 - **En `main`:** crea la rama antes de nada (`git switch -c <rama>`), con el nombre de la norma:
-  - En un producto con un slice en curso, `slice/Sxx-nombre`. El slice lo da el estado del proyecto (`npm run status` en ReTemplate) o la
+  - En un producto con un slice en curso, `slice/Sxx-nombre`. El slice lo da el estado del proyecto (la pieza «Estado» del `AGENTS.md`) o la
     primera fila sin ✅ de `docs/roadmap.md`.
   - En los demás casos, `feat/`, `fix/`, `docs/` o `chore/` con un tema corto sacado de los cambios.
   - Los cambios sin commitear viajan con `git switch -c`: no hace falta stash.
-- **En otra rama:** comprueba que los cambios son de ella. Si no lo son (estás en `slice/S03-baul` y el
+- **En otra rama:** comprueba que los cambios son de ella. Si no lo son (estás en `slice/S03-historial` y el
   cambio es del lint de todo el repo), no los mezcles: propone otra rama y pregunta.
 
 ## 3. Repartir en commits

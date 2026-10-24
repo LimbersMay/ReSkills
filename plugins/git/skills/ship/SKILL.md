@@ -92,8 +92,8 @@ Si algo de esto falla, para y di qué falta. No lo arregles por tu cuenta dentro
 - El enlace de la PR fusionada.
 - El tag y la release, si los hubo.
 - `git log --first-parent --oneline -3 main`.
-- Lo que pide el repo después de publicar. Por ejemplo, en ReDesign, los productos que tienen que subir
-  su versión fijada, según lo que diga su CHANGELOG.
+- Lo que pide el repo después de publicar. Por ejemplo, en una librería que otros repos fijan por
+  versión, cuáles tienen que subirla, según lo que diga su CHANGELOG.
 
 ## Lo que nunca haces
 

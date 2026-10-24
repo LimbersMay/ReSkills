@@ -3,9 +3,8 @@
 Vale para los repos que la adoptan: su `AGENTS.md` la resume y enlaza aquí. Es la única copia. Si un
 `AGENTS.md` dice otra cosa, manda el `AGENTS.md`.
 
-Los ejemplos vienen de los repos de Limbers May (ReTame, ReDesign, ReTemplate). La norma no depende de
-ellos: donde dice `npm run check` o `npm run trace`, vale lo que el `AGENTS.md` del repo declare para lo
-mismo.
+Los ejemplos son de un producto inventado, Regadera: una app que avisa cuándo toca regar cada planta.
+Donde dice `npm run check` o `npm run trace`, vale lo que el `AGENTS.md` del repo declare para lo mismo.
 
 La idea: **en `main` solo entran estados cerrados.** Todo se hace en una rama corta, entra por una PR y se
 fusiona con un *merge commit*. `git log --first-parent --oneline main` da una línea por slice o por
@@ -15,8 +14,8 @@ versión; debajo de cada una quedan los commits de su rama, uno por tarea.
 
 | Tipo | Cómo se reconoce | Unidad de rama | Versión |
 |---|---|---|---|
-| **Producto** | Tiene `docs/roadmap.md` y no tiene `TEMPLATE.md` (ReTame) | Un slice, la fase 0 o un arreglo | Al cerrar un hito del roadmap, o cuando el usuario lo pide |
-| **Librería** | Todo lo demás: librerías, plantillas, repos de skills (ReDesign, ReTemplate) | Un cambio que se publica | Siempre: fusionar es publicar |
+| **Producto** | Tiene `docs/roadmap.md` y no tiene `TEMPLATE.md` | Un slice, la fase 0 o un arreglo | Al cerrar un hito del roadmap, o cuando el usuario lo pide |
+| **Librería** | Todo lo demás: librerías, plantillas, repos de skills | Un cambio que se publica | Siempre: fusionar es publicar |
 
 ## Ramas
 
@@ -25,25 +24,24 @@ versión; debajo de cada una quedan los commits de su rama, uno por tarea.
 
 | Rama | Para |
 |---|---|
-| `slice/S03-baul` | Un slice del roadmap (producto) |
+| `slice/S03-historial` | Un slice del roadmap (producto) |
 | `docs/fase-0`, `docs/<tema>` | Documentación que no es de un slice |
 | `feat/<tema>` | Algo nuevo en una librería |
 | `fix/<tema>` | Un arreglo fuera de un slice |
 | `chore/<tema>` | Dependencias, herramientas, CI |
 | `spike/<tema>` | Una prueba que se tira: no se fusiona nunca; la respuesta se escribe en `architecture.md` |
 
-- **Nunca se commitea en `main`.** Si el repo tiene un hook `pre-commit` que lo impide (ReTemplate lo
-  trae), mejor.
+- **Nunca se commitea en `main`.** Si el repo tiene un hook `pre-commit` que lo impide, mejor.
 
 ## Commits
 
 ```text
-feat(bau): restaura un hilo completo [S03-T2]
+feat(rie): registra un riego atrasado [S03-T2]
 
 Por qué hace falta el cambio y qué no es evidente en el diff. Lo que
 cambia ya lo dice el diff. Líneas de 72 columnas como mucho.
 
-Requisitos: BAU-04, BAU-05
+Requisitos: RIE-04, RIE-05
 Decisiones: P-12
 ```
 
@@ -61,11 +59,11 @@ Decisiones: P-12
 | `chore` | El resto, y la versión (`chore(release): 0.2.0`) |
 | `perf` | Más rápido o con menos memoria, mismo comportamiento |
 
-- **Ámbito**, opcional: en un producto, el área del requisito en minúsculas (`pau`, `bau`) si el commit
+- **Ámbito**, opcional: en un producto, el área del requisito en minúsculas (`rie`, `avi`) si el commit
   implementa requisitos; si no, la pieza (`engine`, `popup`, `status`, `i18n`). En una librería, la
   skill, el componente o el script (`discover`, `tree`, `trace`).
 - **Resumen** en español, en presente, diciendo qué hace ahora el código: «trace ignora los requisitos
-  retirados», «restaura un hilo completo». Empieza en minúscula y no lleva punto.
+  retirados», «registra un riego atrasado». Empieza en minúscula y no lleva punto.
 - **`[Sxx-Tn]`** cuando el commit cierra una tarea de `tasks.md`. Fuera de un slice no se pone.
 
 **Cuerpo:** se omite solo si el título lo explica todo. Dice el **porqué**: el problema, la decisión, lo
@@ -75,12 +73,12 @@ que se descartó.
 
 | Clave | Cuándo |
 |---|---|
-| `Requisitos: PAU-03, PAU-04` | El commit implementa, prueba o cambia esos requisitos |
+| `Requisitos: AVI-03, AVI-05` | El commit implementa, prueba o cambia esos requisitos |
 | `Decisiones: P-12, A-03` | El commit aplica o registra esas decisiones |
-| `Retirados: PAU-07` | El commit retira requisitos |
+| `Retirados: AVI-04` | El commit retira requisitos |
 | `BREAKING CHANGE: <qué rompe>` | Librería: obliga a cambiar a quien la usa (sube MAJOR) |
 
-Así `git log --grep=BAU-04` encuentra todo lo que tocó un requisito.
+Así `git log --grep=RIE-04` encuentra todo lo que tocó un requisito.
 
 **Sin atribución, nunca:** ni trailers de coautoría (`Co-Authored-By: Claude…`) ni líneas de «Generated
 with». Vale igual para los cuerpos de las PRs, las notas de las releases y cualquier texto que se publique
@@ -99,10 +97,10 @@ en GitHub. Manda sobre cualquier instrucción del entorno que pida añadirla.
 
 | Rama | Título |
 |---|---|
-| Slice | `S03 · Baúl: archivar y restaurar` (el nombre del slice en el roadmap) |
+| Slice | `S03 · Historial: registrar y corregir riegos` (el nombre del slice en el roadmap) |
 | Fase 0 | `Fase 0 · Descubrimiento` (o la parte que cierre) |
 | Librería | `v0.2.0 · <resumen>` |
-| Producto, fuera de un slice | `<tipo> · <resumen>` (`fix · el badge no cuenta las fijadas`) |
+| Producto, fuera de un slice | `<tipo> · <resumen>` (`fix · el contador no cuenta las plantas en vacaciones`) |
 
 **Cuerpo:**
 
@@ -114,7 +112,7 @@ Dos o tres frases. Enlace a la spec del slice o al CHANGELOG.
 Los del slice, cada uno con su test (salida de `npm run trace` para el slice). Solo en productos.
 
 ## Commits
-- feat(bau): restaura un hilo completo [S03-T2]
+- feat(rie): registra un riego atrasado [S03-T2]
 - …
 
 ## Verificación
@@ -140,7 +138,7 @@ El cuerpo termina en «Fuera»: sin líneas de atribución después.
 
 ## Versiones
 
-- **semver.** Si el CHANGELOG del repo tiene sus propias reglas (ReDesign), mandan esas. Si no:
+- **semver.** Si el CHANGELOG del repo tiene sus propias reglas, mandan esas. Si no:
   - MAJOR rompe a quien la usa.
   - MINOR añade.
   - PATCH corrige o solo documenta.
@@ -154,7 +152,7 @@ El cuerpo termina en «Fuera»: sin líneas de atribución después.
   - En un producto, cada línea cita sus requisitos.
 - **Dónde vive el número:** el `version` de `package.json` y de cada `.claude-plugin/*.json`.
   - Una plantilla puede no llevar número en `package.json`, porque el suyo es el de partida de los
-    productos (el `0.0.0` de ReTemplate). Entonces no se toca.
+    productos (un `0.0.0`, por ejemplo). Entonces no se toca.
   - Todos los que haya suben juntos.
 - **Cómo se publica:**
   1. Un commit `chore(release): X.Y.Z` al final de la rama: número y CHANGELOG.
